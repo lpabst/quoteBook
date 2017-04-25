@@ -16,8 +16,8 @@
     <div class="heading">
       <h2>Quote List</h2>
       <p>Search By:
-        <span><input class='search_input' ng-model='search_quote' placeholder="quote"></span>
-        <span><input class='search_input' ng-model='search_author' placeholder="author"></span>
+        <span><input class='search_input' ng-model='searchByQuote' placeholder="quote"></span>
+        <span><input class='search_input' ng-model='searchByAuthor' placeholder="author"></span>
       </p>
     </div>
 
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class='quote' ng-repeat='quote in quotes'>
+    <div class='quote' ng-repeat='quote in quotes | filter: searchByQuote | filter: searchByAuthor'>
       <span class='quotation'>"</span>{{ quote.text }}<span class='quotation'>"</span> 
       {{ quote.author | uppercase}}
       <button class='deleteButton' ng-click='deleteQuote(quotes.indexOf(quote))'>Delete</button>
