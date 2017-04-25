@@ -11,9 +11,26 @@
 
 <body ng-controller="mainCtrl">
   
-  {{ test }}
- <br>
-  {{ serviceTest }}
+  <section class='main_container'>
+
+    <div class='quote'>
+      <p><span class='quotation'>"</span>Quotes aren't fun<span class='quotation'>"</span> 
+      NO ONE EVER</p>
+      <button class='deleteButton' ng-click=''>Add</button>
+    </div>
+
+    <div class='quote' ng-repeat='quote in quotes'>
+      <span class='quotation'>"</span>{{ quote.text }}<span class='quotation'>"</span> 
+      {{ quote.author | uppercase}}
+      <button class='deleteButton' ng-click=''>Delete</button>
+    </div>
+
+
+
+  </section>
+
+
+
 
 
 

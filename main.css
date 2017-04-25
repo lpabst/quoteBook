@@ -1,2 +1,33 @@
 
+.main_container{
+    width: 90%;
+    margin-left: 5%;
+    background: #edffff;
+    position: relative;
+    border-right: 5px solid gray;
+}
+
+.quote{
+    width: 100%;
+    font-size: 28px;
+    font-family: sans-serif;
+    padding: 10px 45px 10px 5px;
+    border-bottom: 5px solid gray;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    position: relative;
+}
+
+.quotation{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.deleteButton{
+    background: black;
+    color: white;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
 
