@@ -16,13 +16,19 @@
     <div class='quote'>
       <p><span class='quotation'>"</span>Quotes aren't fun<span class='quotation'>"</span> 
       NO ONE EVER</p>
-      <button class='deleteButton' ng-click=''>Add</button>
+      <button class='deleteButton' ng-click='showInput()'>Add Quote</button>
+    
+      <div class='inputArea' ng-show='show'>
+        <input class='inputQuote' type='text' ng-model='inputQuote' placeholder="Quote">
+        <input type='text' ng-model="inputAuthor" placeholder="Author">
+        <button ng-click='addQuote(inputQuote, inputAuthor)'>Submit</button>
+      </div>
     </div>
 
     <div class='quote' ng-repeat='quote in quotes'>
       <span class='quotation'>"</span>{{ quote.text }}<span class='quotation'>"</span> 
       {{ quote.author | uppercase}}
-      <button class='deleteButton' ng-click=''>Delete</button>
+      <button class='deleteButton' ng-click='deleteQuote(quotes.indexOf(quote))'>Delete</button>
     </div>
 
 
